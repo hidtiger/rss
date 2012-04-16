@@ -18,7 +18,6 @@ get '/' do
 		contents.search('comment()').each do |v| v.remove end
 		v.at('description').child.remove
 		v.at('description') << Nokogiri::XML::CDATA.new(v.document, contents.to_s)
-		sleep 1
 	end
 	rss.to_s
 end
