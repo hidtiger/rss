@@ -2,6 +2,7 @@
 
 require 'nokogiri'
 require 'open-uri'
+require 'sinatra'
 
 uri = 'http://juggly.cn/feed'
 xpath = '/html/body/div/div[3]/div[2]'
@@ -18,4 +19,6 @@ rss.search('item').each do |v|
 end
 
 puts rss.to_s
+
+
 
